@@ -7,6 +7,7 @@ import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
+import java.util.Set;
 
 @Repository
 public interface GameResultRepository extends ListCrudRepository<GameResult, Long> {
@@ -18,4 +19,7 @@ public interface GameResultRepository extends ListCrudRepository<GameResult, Lon
         ORDER BY id DESC
     """)
     List<GameResult> findByTeamName(@Param("teamName") String teamName);
+
+    @Query("SELECT api_id FROM liiga.game_results")
+    Set<Integer> findAllApiIds();
 }

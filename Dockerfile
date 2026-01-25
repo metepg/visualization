@@ -10,18 +10,16 @@ RUN npm run build
 
 # ---------- server ----------
 FROM eclipse-temurin:21-jdk AS build
-WORKDIR /app
+WORKDIR /app/server
 
-COPY mvnw .
-COPY .mvn .mvn
+COPY server/mvnw .
+COPY server/.mvn .mvn
 RUN chmod +x mvnw
 
-COPY pom.xml ./
-COPY server/pom.xml server/pom.xml
+COPY server/ .
 
-COPY server/ server/
 COPY --from=client /client/dist client/dist/
-RUN ./mvnw -pl server package -DskipTests
+RUN ./mvnw package -DskipTests
 
 # ---------- runtime ----------
 FROM eclipse-temurin:21-jre-alpine

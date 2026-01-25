@@ -10,3 +10,19 @@ hr {
 section {
   margin-bottom: 400px;
 }
+
+.gameResultsContainer {
+  min-height: 600px;
+  position: relative;
+}
+
+.gamesLoading {
+  opacity: 0.1;
+  pointer-events: none;
+  transition: opacity 0s ease-in-out;
+}
+
+.gamesReady {
+  opacity: 1;
+  transition: opacity 0s ease-in-out;
+}

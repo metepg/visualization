@@ -1,8 +1,15 @@
-export type GamesJSON = Game[];
-
 export type Game = ScheduledGame | PlayedGame | LiveGame;
 
 /* ---------- Base ---------- */
+
+export interface GameDBResponse {
+  id: number;
+  api_id: number;
+  season: number;
+  homeTeam: string;
+  awayTeam: string;
+  rawJson: Game;
+}
 
 export interface GameBase {
   id: number;

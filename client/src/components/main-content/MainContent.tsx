@@ -1,7 +1,6 @@
-import React, { useMemo, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import styles from './MainContent.module.css';
 import { DEFAULT_FILTERS, GOAL_TYPE, SEASON } from "../../constants/defaultValues.ts";
-import { extractTeamId } from "../../services/gameDataService.ts";
 import Navbar from "../navbar/Navbar.tsx";
 import ChooseComponent from "../choose-component/ChooseComponent.tsx";
 import FiltersComponent from "../filters-component/FiltersComponent.tsx";
@@ -12,32 +11,42 @@ import playersJSON from '../../../demo-data/playerData.json';
 import { Player } from "../../models/Player.ts";
 import { Game } from "../../models/GameData.ts";
 import { Filters } from "../../models/Filters.ts";
+import { fetchGamesByTeam } from "../../services/gameDataService.ts";
 
 interface Props {
   teams: Team[];
-  games: Game[];
 }
 
-const MainContent: React.FC<Props> = ({ teams, games }) => {
+const MainContent: React.FC<Props> = ({ teams }) => {
   const defaultTeam = teams[0];
   const [filters, setFilters] = useState<Filters>({
     ...DEFAULT_FILTERS,
     team: defaultTeam,
   });
+  const [games, setGames] = useState<Game[]>([]);
+  const [isLoading, setIsLoading] = useState(false);
 
-  // TODO: Check this part
-  const selectedTeamGames = useMemo(() => {
-    const teamId = filters.team?.data?.id;
-    if (!teamId || games.length === 0) return [];
+  useEffect(() => {
+    const teamName = filters.team?.name;
 
-    return games
-      .filter((game) =>
-        extractTeamId(game.homeTeam.teamId) === teamId ||
-        extractTeamId(game.awayTeam.teamId) === teamId
-      )
-      .filter((game) => game.started && game.ended)
-      .reverse();
-  }, [games, filters.team]);
+    if (!teamName) {
+      return;
+    }
+
+    const loadData = async () => {
+      setIsLoading(true);
+      try {
+        const fetchedGames = await fetchGamesByTeam(teamName);
+        setGames(fetchedGames);
+      } catch (err) {
+        console.error("Failed to load games", err);
+      } finally {
+        setIsLoading(false);
+      }
+    };
+
+    loadData();
+  }, [filters.team]);
 
   const players = playersJSON as Player[];
   const playersById = useMemo(() => {
@@ -59,12 +68,14 @@ const MainContent: React.FC<Props> = ({ teams, games }) => {
         />
         <hr/>
         <NowVisualizing filters={filters} players={players}/>
-        <section>
-          <Content
-            games={selectedTeamGames}
-            filters={filters}
-            playersById={playersById}
-          />
+        <section className={styles.gameResultsContainer}>
+          <div className={isLoading ? styles.gamesLoading : styles.gamesReady}>
+            <Content
+              games={games}
+              filters={filters}
+              playersById={playersById}
+            />
+          </div>
         </section>
       </main>
     </>

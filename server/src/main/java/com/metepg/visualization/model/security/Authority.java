@@ -1,4 +1,4 @@
-package com.metepg.visualization.model;
+package com.metepg.visualization.model.security;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;

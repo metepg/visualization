@@ -1,10 +1,14 @@
 import axios from 'axios';
-import { Game } from "../models/GameData.ts";
+import { Game, GameDBResponse } from "../models/GameData.ts";
 
-// Fetches all games from every team from this season until today
 export const fetchGames = async (): Promise<Game[]> => {
-  const { data } = await axios.get<Game[]>("https://www.liiga.fi/api/v2/games?tournament=runkosarja");
-  return data;
+  const { data } = await axios.get<GameDBResponse[]>("/api/games");
+  return data.map((game) => game.rawJson);
+};
+
+export const fetchGamesByTeam = async (teamName?: string): Promise<Game[]> => {
+  const { data } = await axios.get<GameDBResponse[]>(`/api/games/${teamName}`);
+  return data.map((game) => game.rawJson);
 };
 
 export const extractTeamId = (teamId: string): number => Number(teamId.split(":")[0]);

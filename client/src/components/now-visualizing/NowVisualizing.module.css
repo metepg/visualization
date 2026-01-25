@@ -1,0 +1,103 @@
+.wrapper {
+  margin-bottom: 10px;
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  grid-gap: 5px;
+  grid-template-areas:
+    "first-row-left first-row-right"
+    ". second-row-right"
+    ". third-row-right";
+}
+
+.visualizeText {
+  grid-area: first-row-left;
+  background-color: var(--red);
+  color: var(--white);
+  width: 100%;
+  text-align: center;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.selectedFilters {
+  grid-area: first-row-right;
+  border: 1px solid var(--dark-grey);
+  width: 100%;
+  padding: 0 20px;
+}
+
+.infoText {
+  grid-area: second-row-right;
+  background-color: var(--white);
+  padding: 0 10px;
+  border: 1px solid var(--dark-grey);
+  width: 100%;
+}
+
+.selectedView {
+  grid-area: third-row-right;
+  height: 48px;
+  align-items: center;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.circleContainer {
+  display: flex;
+  align-items: center;
+}
+
+.circleText {
+  margin-left: 10px;
+  letter-spacing: 1px;
+}
+
+.selectedTeamCircleContainer, .otherTeamCircleContainer {
+  display: flex;
+  align-items: center;
+}
+
+.otherTeamCircleContainer {
+  margin-left: 30px;
+}
+
+.overview, .gameSpecificView {
+  padding: 5px 10px;
+  text-align: center;
+  display: inline-block;
+  font-size: var(--font-size-small);
+}
+
+.switch {
+  display: none;
+  align-items: center;
+  gap: 10px;
+}
+
+.switchLabel {
+  font-size: var(--font-size-small);
+}
+
+.view {
+  display: none;
+}
+
+.overview {
+  background-color: var(--red);
+  border: 2px solid var(--red);
+  color: var(--white);
+  margin-right: 3px;
+}
+
+.gameSpecificView {
+  background-color: var(--white);
+  border: 2px solid var(--dark-grey);
+  color: var(--black);
+}
+
+.selectedOptions {
+  text-transform: uppercase;
+  padding-right: 10px;
+}

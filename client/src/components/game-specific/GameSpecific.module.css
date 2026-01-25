@@ -1,0 +1,77 @@
+* {
+  font-size: var(--font-size-normal);
+}
+
+body.no-scroll {
+  overflow: hidden;
+}
+
+.dialogHeaderStyles {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.matchHeader {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.dialogHeaderStyles h2 {
+  margin-top: 5px;
+  text-transform: uppercase;
+}
+
+.label {
+  font-size: var(--font-size-small);
+  background-color: var(--white);
+  z-index: 1;
+  text-align: left;
+}
+
+.dialogStyles {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dialogContentStyles {
+  position: relative;
+  height: 370px;
+  padding: 30px 0;
+}
+
+.dialogBodyStyles {
+  display: grid;
+  grid-template-columns: 120px 700px;
+  margin-top: 10px;
+  align-items: center;
+}
+
+.overtimeWrapper {
+  grid-template-columns: 80px 200px;
+}
+
+.periodWrapper {
+  display: contents;
+}
+
+.matchHeader h2 {
+  font-weight: normal;
+}
+
+.periodLabel {
+  width: 100%;
+  font-weight: normal;
+  text-align: end;
+  padding-right: 10px;
+}
+
+.timelineWrapper {
+  width: 100%;
+}
+
+.overtimeWrapper .timelineWrapper {
+  width: 200px;
+}

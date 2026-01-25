@@ -1,0 +1,20 @@
+.wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  width: 95%;
+}
+
+.timelineLine {
+  border-radius: 3px;
+  height: 5px;
+  background-color: var(--light-grey);
+  z-index: 1;
+  width: 100%;
+}
+
+.timelineActive {
+  background-color: var(--dark-grey);
+}

@@ -1,0 +1,21 @@
+:root {
+  --black: #231F20;
+  --white: #FFFFFF;
+  --red: #E21836;
+  --dark-grey: #848694;
+  --light-grey: #ECEEF2;
+  --filtered-selected-team: #FBDDE1;
+  --filtered-other-team: #DEDEDE;
+  --font-size-small: 12px;
+  --font-size-normal: 14px;
+  --font-size-large: 18px;
+  --base-width: 1080px;
+}
+
+.loadingIconContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  letter-spacing: 1px;
+}

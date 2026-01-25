@@ -1,0 +1,137 @@
+* {
+  font-size: var(--font-size-normal);
+}
+
+.overlay {
+  position: absolute;
+  width: max-content;
+  color: var(--white);
+  border: 1px solid var(--black);
+  bottom: 31px;
+  background-color: var(--white);
+  min-width: 300px;
+}
+
+.goalTypeWrapper {
+  display: grid;
+  grid-template-columns: 130px 1fr;
+  background-color: lightblue;
+  text-align: center;
+  height: 35px;
+}
+
+.goalTypeWrapper div {
+  border-bottom: 1px solid var(--black);
+}
+
+.goalTypeInfo {
+  height: 35px;
+  line-height: 9px;
+  background-color: var(--light-grey);
+}
+.goalTypeInfo p {
+  color: var(--black);
+  font-weight: bold;
+}
+
+.scoreInfo {
+  height: 35px;
+  line-height: 9px;
+  background-color: var(--black);
+  color: var(--white);
+  border-right: 1px solid var(--black);
+}
+
+/* Selected teams color on info box */
+.scoreInfo[data-is-selected-team="true"] {
+  background-color: var(--red);
+}
+
+.scoreInfo label {
+  font-weight: normal;
+}
+
+.scoreInfo label[data-scoring-team="true"] {
+  font-weight: bold;
+}
+
+.goalInfoWrapper {
+  height: 60px;
+  color: var(--black);
+  border-bottom: 1px solid var(--black);
+  padding: 8px 20px 8px 20px;
+}
+
+.goalInfoTextWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-around;
+  height: 100%;
+}
+
+.goalInfoTextWrapper p:first-child {
+  font-weight: bold;
+  padding-bottom: 3px;
+}
+
+
+.goalInfoTextWrapper p {
+  margin: 0;
+  text-align: left;
+}
+
+.timeLineWrapper {
+  height: 30px;
+  color: var(--black);
+  display: flex;
+  justify-content: space-between;
+  padding-left: 20px;
+  align-items: center;
+}
+
+.timeLineWrapper p {
+  margin: 0;
+}
+
+.arrow {
+  position: absolute;
+  top: 117px;
+  left: 50%;
+  transform: translateX(-50%) rotate(225deg);;
+  width: 18px;
+  height: 18px;
+  background-color: white;
+  border: 1px solid var(--black);
+  border-bottom: none;
+  border-right: none;
+  z-index: 2;
+}
+
+.playButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  background-color: var(--red);
+  border-radius: 50%;
+  position: relative;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.playButton::before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+  border-left: 7px solid var(--white);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  margin-left: 1px;
+}

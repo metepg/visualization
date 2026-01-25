@@ -1,0 +1,250 @@
+
+h1 {
+  text-align: center;
+  width: 270px;
+  margin: 70px auto 50px auto;
+  /* margin: 25px auto; */
+  color: var(--white);
+  background-color: var(--red);
+  border: 1px solid var(--red);
+  border-radius: 50px;
+  font-size: var(--font-size-normal);
+  padding: 10px 20px;
+  text-transform: uppercase;
+  font-weight: 400;
+  display: none;
+}
+
+.buttonContainer {
+  /* display: flex; */
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 60px;
+  display: none;
+}
+
+.teamButton, .dateButton {
+  padding: 5px 10px;
+  text-align: center;
+  display: inline-block;
+  font-size: var(--font-size-normal);
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.teamButton {
+  background-color: var(--red);
+  border: 2px solid var(--red);
+  color: var(--white);
+  margin-right: 3px;
+}
+
+.dateButton {
+  background-color: var(--light-grey);
+  border: 2px solid var(--light-grey);
+  color: var(--black);
+}
+
+.statsSelectionContainer {
+  display: none;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.chooseContentStyles hr {
+  border: 1px solid var(--light-grey);
+  display: none;
+}
+
+.chooseContentStyles {
+  margin-bottom: 70px;
+}
+
+.underlineBtn {
+  position: relative;
+  display: inline-block;
+  padding: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: inherit;
+  color: #333; /* Change the color as desired */
+}
+
+.selected::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--red);
+  transform: scaleX(1); /* Show the underline when selected */
+  transform-origin: left;
+  transition: transform 0.3s ease; /* Add transition effect to the underline */
+  top: 20px;
+}
+
+.selected {
+  color: var(--red);
+}
+
+/* Remove button outline */
+.underlineBtn:focus {
+  outline: none;
+}
+
+
+.introContainer {
+  width: var(--base-width);
+  height: auto;
+  position: relative;
+  display: flex;
+  left: -10px;
+}
+
+.headerContainer {
+  width: 100%;
+  height: 120px;
+  margin-bottom: 25px;
+}
+
+.headerRow1 {
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+.red {
+  color: var(--red);
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+.headerRow2 {
+  font-size: 21px;
+  font-weight: normal;
+  text-align: center;
+}
+
+.introBox {
+  width: 33.3%;
+  min-height: 300px;
+  height: auto;
+  background-color: var(--white);
+  display: inline;
+  filter: drop-shadow(0px 0px 10px #dddddd);
+  margin-left: 20px;
+
+
+}
+
+.firstRow {
+  width: 100%;
+  height: 100px;
+  background-color: var(--white);
+
+}
+
+.secondRow {
+  width: 80%;
+  height: 40px;
+  background-color: var(--white);
+  border-bottom: 2px solid var(--red);
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin: auto;
+}
+
+.thirdRow {
+  width: 100%;
+  height: 120px;
+  background-color: var(--white);
+  text-align: center;
+  padding: 15px;
+
+}
+
+.fourthRow {
+  width: 100%;
+  height: 50px;
+  background-color: var(--red);
+  color: var(--white);
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 15px;
+
+}
+
+.circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: var(--red);
+  margin: auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: var(--white);
+  font-weight: bold;
+}
+
+.circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  background-color: var(--red);
+  margin: auto;
+  position: relative;
+  top: 25%;
+}
+
+.circle div {
+  font-size: var(--font-size-large);
+}
+
+.introDivider {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  margin-top: 30px;
+}
+
+.line {
+  width: 42%;
+  display: inline;
+  height: 1px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+  margin-top: 10px;
+}
+
+.dividerText {
+  width: 16%;
+  display: inline;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 0 10px;
+}
+
+.arrow {
+
+  transform: translateX(-50%) rotate(225deg);
+  width: 18px;
+  height: 18px;
+  background-color: white;
+  border: 1.1px solid rgba(0, 0, 0, 0.25);
+  border-bottom: none;
+  border-right: none;
+  z-index: 2;
+  margin-left: 50%;
+  margin-right: 50%;
+
+}

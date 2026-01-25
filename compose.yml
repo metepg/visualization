@@ -1,0 +1,16 @@
+services:
+  visualization-database:
+    image: postgres:17-alpine
+    container_name: visualization-database
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: visualization
+    ports:
+      - "5435:5432"
+    volumes:
+      - visualization_db_data:/var/lib/postgresql/data
+      - ./init-scripts:/docker-entrypoint-initdb.d
+
+volumes:
+  visualization_db_data:

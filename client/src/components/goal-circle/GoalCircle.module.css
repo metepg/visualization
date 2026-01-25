@@ -1,0 +1,13 @@
+.circle {
+  border-radius: 50%;
+  border: 1px solid var(--white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+
+.eventText {
+  color: var(--white);
+  font-size: var(--font-size-small);
+}

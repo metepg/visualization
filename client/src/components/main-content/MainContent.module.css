@@ -1,0 +1,12 @@
+.contentWrapper {
+  width: var(--base-width);
+  margin: 0 auto;
+}
+
+hr {
+  border-top: 1px solid var(--dark-grey);
+}
+
+section {
+  margin-bottom: 400px;
+}

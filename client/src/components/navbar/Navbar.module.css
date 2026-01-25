@@ -1,0 +1,74 @@
+.navbar {
+  min-width: var(--base-width);
+  height: 100px;
+  background-color: var(--black);
+  position: relative;
+}
+
+.topRight {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
+  background-color: var(--red);
+  color: var(--white);
+  text-transform: uppercase;
+  padding: 10px 20px;
+  letter-spacing: 1px;
+}
+
+.hr {
+  margin: 0;
+  width: 100%;
+  border: 7px solid var(--light-grey);
+}
+
+.brandContent {
+  max-width: var(--base-width);
+  margin: auto;
+  height: 60px;
+}
+
+.logoArea {
+  width: 80px;
+  height: 80px;
+  margin-left: 0;
+  background-image: url('/src/components/navbar/logo.svg');
+  top: 10px;
+  position: relative;
+  float: left;
+
+}
+
+.nameArea {
+  width: auto;
+  height: 80px;
+  position: relative;
+  float: left;
+  color: var(--white);
+  top: 40px;
+  margin-left: 20px;
+  font-size: 14px;
+  letter-spacing: 2px;
+  font-weight: bold;
+
+}
+
+.sloganArea {
+  width: auto;
+  height: 80px;
+  position: relative;
+  float: left;
+  color: var(--white);
+  top: 41px;
+  margin-left: 11px;
+  font-size: 12px;
+  letter-spacing: 2px;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
+.redColor {
+  color: var(--red);
+  margin-left: 2px;
+}

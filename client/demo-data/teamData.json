@@ -1,0 +1,148 @@
+{
+  "teams": [
+    {
+      "name": "HPK",
+      "data": {
+        "teamName": "HPK",
+        "teamLogo": "https://cdn.builder.io/api/v1/image/assets%2Ff11503eeae084753968caac3899a5d78%2F6020edd6d9bc45b68a50bd191b826deb",
+        "id": 55786244,
+        "externalHomepageLink": "http://www.hpk.fi/"
+      }
+    },
+    {
+      "name": "Ilves",
+      "data": {
+        "teamName": "Ilves",
+        "teamLogo": "https://cdn.builder.io/api/v1/image/assets%2Ff11503eeae084753968caac3899a5d78%2F079e0e0bde4f43b8b8afa667d3285ebc",
+        "id": 951626834,
+        "externalHomepageLink": "https://ilves.com/"
+      }
+    },
+    {
+      "name": "Jukurit",
+      "data": {
+        "teamName": "Jukurit",
+        "teamLogo": "https://cdn.builder.io/api/v1/image/assets%2Ff11503eeae084753968caac3899a5d78%2F5fa94d44327f46b7b4e30ae58a3be7ca",
+        "id": 292293444,
+        "externalHomepageLink": "http://www.jukurit.fi/"
+      }
+    },
+    {
+      "name": "JYP",
+      "data": {
+        "teamName": "JYP",
+        "teamLogo": "https://cdn.builder.io/api/v1/image/assets%2Ff11503eeae084753968caac3899a5d78%2Ff4d92d41c1c44d34b6ebb117490966f6",
+        "id": 219244634,
+        "externalHomepageLink": "http://www.jypliiga.fi/"
+      }
+    },
+    {
+      "name": "KalPa",
+      "data": {
+        "teamName": "KalPa",
+        "teamLogo": "https://cdn.builder.io/api/v1/image/assets%2Ff11503eeae084753968caac3899a5d78%2F1183427f2aed401184bc2f96bb1a3303",
+        "id": 859884935,
+        "externalHomepageLink": "http://www.kalpa.fi/"
+      }
+    },
+    {
+      "name": "K-Espoo",
+      "data": {
+        "teamName": "K-Espoo",
+        "teamLogo": "https://cdn.builder.io/api/v1/image/assets%2Ff11503eeae084753968caac3899a5d78%2Fbf4ab47ce42640ebad139fd11a6a7861",
+        "id": 1368624751,
+        "externalHomepageLink": "http://www.kiekko-espoo.fi/"
+      }
+    },
+    {
+      "name": "KooKoo",
+      "data": {
+        "teamName": "KooKoo",
+        "teamLogo": "https://cdn.builder.io/api/v1/image/assets%2Ff11503eeae084753968caac3899a5d78%2F7d933387f498496094d7ef1928e9fa7b",
+        "id": 461765763,
+        "externalHomepageLink": "http://www.kookoo.fi/"
+      }
+    },
+    {
+      "name": "Kärpät",
+      "data": {
+        "teamName": "Kärpät",
+        "teamLogo": "https://cdn.builder.io/api/v1/image/assets%2Ff11503eeae084753968caac3899a5d78%2F57b5b1a6c04f43368910ee73822513d8",
+        "id": 495643563,
+        "externalHomepageLink": "https://karpat.fi/"
+      }
+    },
+    {
+      "name": "Lukko",
+      "data": {
+        "teamName": "Lukko",
+        "teamLogo": "https://cdn.builder.io/api/v1/image/assets%2Ff11503eeae084753968caac3899a5d78%2F48695ce02ec549dab74ad90e65d1e532",
+        "id": 624554857,
+        "externalHomepageLink": "http://www.raumanlukko.fi/"
+      }
+    },
+    {
+      "name": "Pelicans",
+      "data": {
+        "teamName": "Pelicans",
+        "teamLogo": "https://cdn.builder.io/api/v1/image/assets%2Ff11503eeae084753968caac3899a5d78%2F269341129a1449ccb0a64345337c3273",
+        "id": 875886777,
+        "externalHomepageLink": "http://www.pelicans.fi/"
+      }
+    },
+    {
+      "name": "SaiPa",
+      "data": {
+        "teamName": "SaiPa",
+        "teamLogo": "https://cdn.builder.io/api/v1/image/assets%2Ff11503eeae084753968caac3899a5d78%2F5640db8b21854732baf6afc56fc013b5",
+        "id": 933686567,
+        "externalHomepageLink": "http://www.saipa.fi/"
+      }
+    },
+    {
+      "name": "TPS",
+      "data": {
+        "teamName": "TPS",
+        "teamLogo": "https://cdn.builder.io/api/v1/image/assets%2Ff11503eeae084753968caac3899a5d78%2Fe07109c96edf4561b8b5021e7fc44526",
+        "id": 651304385,
+        "externalHomepageLink": "http://hc.tps.fi/"
+      }
+    },
+    {
+      "name": "Sport",
+      "data": {
+        "teamName": "Sport",
+        "teamLogo": "https://cdn.builder.io/api/v1/image/assets%2Ff11503eeae084753968caac3899a5d78%2F77efd6df129843699ae9a4c2e94efcb2",
+        "id": 626537494,
+        "externalHomepageLink": "http://www.vaasansport.fi/"
+      }
+    },
+    {
+      "name": "HIFK",
+      "data": {
+        "teamName": "HIFK",
+        "teamLogo": "https://cdn.builder.io/api/v1/image/assets%2Ff11503eeae084753968caac3899a5d78%2F46a26a5506f543b3a32e0035f260302b",
+        "id": 168761288,
+        "externalHomepageLink": "http://www.hifk.fi/"
+      }
+    },
+    {
+      "name": "Tappara",
+      "data": {
+        "teamName": "Tappara",
+        "teamLogo": "https://cdn.builder.io/api/v1/image/assets%2Ff11503eeae084753968caac3899a5d78%2F8bb664ba2392481ebc1091a33ee75513",
+        "id": 362185137,
+        "externalHomepageLink": "http://www.tappara.fi/"
+      }
+    },
+    {
+      "name": "Ässät",
+      "data": {
+        "teamName": "Ässät",
+        "teamLogo": "https://cdn.builder.io/api/v1/image/assets%2Ff11503eeae084753968caac3899a5d78%2Fe4c7031958a043cdb8ca80c3c353f0c6",
+        "id": 679171680,
+        "externalHomepageLink": "http://www.assat.com/"
+      }
+    }
+  ]
+}

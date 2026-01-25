@@ -1,0 +1,47 @@
+.toggle {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+}
+
+.toggle-checkbox {
+  position: absolute;
+  visibility: hidden;
+}
+
+.toggle-switch {
+  display: inline-block;
+  background: none;
+  border: 2px solid var(--dark-grey); /* Increase the border width */
+  border-radius: 16px;
+  width: 50px; /* Adjust the width as desired */
+  height: 25px; /* Adjust the height as desired */
+  position: relative;
+  vertical-align: middle;
+  transition: background 0.25s;
+  bottom: 2px;
+}
+
+.toggle-switch:before,
+.toggle-switch:after {
+  content: '';
+}
+
+.toggle-switch:before {
+  display: block;
+  background: var(--red);
+  border-radius: 50%;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.25);
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  top: 3px; /* Adjust the top position to center the circle vertically */
+  left: 4px; /* Adjust the left position to increase the initial distance of the circle */
+  transition: left 0.25s;
+}
+
+.toggle-checkbox:checked + .toggle-switch:before {
+  left: calc(100% - 20px); /* Increase the travel distance of the circle */
+  background: var(--red);
+}
+

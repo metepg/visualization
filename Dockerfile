@@ -18,7 +18,7 @@ RUN chmod +x mvnw
 
 COPY server/ .
 
-COPY --from=client /client/dist client/dist/
+COPY --from=client /client/dist src/main/resources/static/
 RUN ./mvnw package -DskipTests
 
 # ---------- runtime ----------

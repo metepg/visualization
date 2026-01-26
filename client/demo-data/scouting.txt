@@ -4,27 +4,42 @@
 Logo ja nimet: https://cdn.builder.io/api/v3/....
 
 ## PELAAJAT
-kaikki 2026 vuoden?: https://www.liiga.fi/api/v2/players/info?tournament=runkosarja&fromSeason=2026&toSeason=2026
+kaikki 2026 vuoden
+- https://www.liiga.fi/api/v2/players/info?tournament=runkosarja&fromSeason=2026&toSeason=2026
 
 ## PELIT
-yksittäinen peli: https://liiga.fi/api/v2/games/2026/13
+Yksittäinen peli
+https://liiga.fi/api/v2/games/2026/13
 
-kaikki viikon pelit vkon mukaan?: https://www.liiga.fi/api/v2/games?tournament=runkosarja&week=14
+2018 kauden vika peli
+https://liiga.fi/api/v2/games/2018/505
+2018 playoffs
+https://liiga.fi/api/v2/games?season=2018&tournament=playoffs
 
-tulevat matsit?: https://www.liiga.fi/api/v2/games?tournament=runkosarja&date=2025-12-20
+2026 kauden eka peli (voittolaukaukset)
+https://liiga.fi/api/v2/games/2026/1
 
-joku tournament polku: https://www.liiga.fi/api/v2/tournament
+Kaikki viikon pelit vkon mukaan?
+https://www.liiga.fi/api/v2/games?tournament=runkosarja&week=14
 
-toinen tournament polku?: https://www.liiga.fi/api/v2/games?tournament=runkosarja&date=2025-12-20
+Tulevat matsit?
+https://www.liiga.fi/api/v2/games?tournament=runkosarja&date=2025-12-20
+
+Tournament polku
+https://www.liiga.fi/api/v2/games?season=2024&tournament=runkosarja
+https://www.liiga.fi/api/v2/games?season=2024&tournament=playoffs
+https://www.liiga.fi/api/v2/games?tournament=runkosarja&date=2025-12-20
+
 
 Edelliset 10 matsia?
- - https://liiga.fi/api/v2/games/preview/2026/334/?gameDate=2026-01-24&homeTeam=292293444:jukurit
+https://liiga.fi/api/v2/games/preview/2026/334/?gameDate=2026-01-24&homeTeam=292293444:jukurit
  tai
- - https://liiga.fi/api/v2/games/preview/2026/334/?gameDate=2026-01-24&homeTeam=292293444:jukurit&awayTeam=951626834:ilves
+https://liiga.fi/api/v2/games/preview/2026/334/?gameDate=2026-01-24&homeTeam=292293444:jukurit&awayTeam=951626834:ilves
 
 
 ## Game Specific
 
 - Videot https://www.liiga.fi/api/v2/teliavideos/2026/231
-- Laukaukset (löytyy shootout jollain logiikalla) https://www.liiga.fi/api/v2/shotmap/2026/231
+- Laukaukset https://www.liiga.fi/api/v2/shotmap/2026/231
 - Tilastoja mm. jäähyt? https://www.liiga.fi/api/v2/games/stats/2026/231
+

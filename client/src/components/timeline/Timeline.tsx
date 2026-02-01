@@ -19,6 +19,10 @@ const Timeline: React.FC<Props> = ({ goals, filters, game, selectedRowDate, isHo
   const isRowSelected = selectedRowDate;
 
   const goalEvents = goals.map((goal, index) => {
+    if (!goal.scorerPlayer) {
+      return;
+    }
+
     const isOvertime = goal.period > 3;
     const periodInMinutes = isOvertime ? 5 : 20;
 
@@ -47,10 +51,8 @@ const Timeline: React.FC<Props> = ({ goals, filters, game, selectedRowDate, isHo
       justifyContent: 'center',
       alignItems: 'center',
       border: '1px solid var(--white)',
-      zIndex: isSelectedTeam
-        ? showGoal
-          ? 4
-          : 3
+      zIndex: showGoal
+        ? (isSelectedTeam ? 4 : 3)
         : 2,
       fontSize: 'var(--font-size-small)',
       fontWeight: 'normal',

@@ -10,8 +10,8 @@ const ChooseComponent: React.FC = () => {
   return (
     <section className={styles.chooseContentStyles}>
       <div className={styles.headerContainer}>
-        <div className={styles.headerRow1}>VISUALIZING<span className={styles.red}>LIIGA</span></div>
-        <div className={styles.headerRow2}>Datavisualization Service for LIIGA Stats</div>
+        <h1 className={styles.headerRow1}>GET STARTED</h1>
+        <div className={styles.headerRow2}>ICETIME is a professional analytics platform that adds the temporal dimension missing from traditional hockey statistics, unlocking new insights for media and leagues</div>
       </div>
       <div className={styles.introContainer}>
         <div className={styles.introBox}>
@@ -22,10 +22,15 @@ const ChooseComponent: React.FC = () => {
           </div>
           <div className={styles.secondRow}>Choose
           </div>
-          <div className={styles.thirdRow}>Your Team<br></br>Your Players<br></br>Your Timeline
+          <div className={styles.thirdRow}>Your Team
+            <br/>
+            Your Players
+            <br/>
+            Your Timeline
+            <br/>
+            Your Events
           </div>
-          <div className={styles.fourthRow}>Your preference
-          </div>
+          <div className={styles.fourthRow}>Your preference</div>
         </div>
         <div className={styles.introBox}>
           <div className={styles.firstRow}>
@@ -49,7 +54,7 @@ const ChooseComponent: React.FC = () => {
           </div>
           <div className={styles.secondRow}>Discover
           </div>
-          <div className={styles.thirdRow}>Thrilling Details<br></br>Unexpected Trends<br></br>The Big Picture
+          <div className={styles.thirdRow}>Thrilling Details<br></br>Revealing Trends<br></br>The Big Picture
           </div>
           <div className={styles.fourthRow}>Better Insights
           </div>
@@ -63,7 +68,6 @@ const ChooseComponent: React.FC = () => {
         <div className={styles.line}></div>
 
       </div>
-      <h1>Choose team to get started</h1>
       <hr/>
       <div className={styles.statsSelectionContainer}>
         <button

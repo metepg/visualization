@@ -3,6 +3,8 @@
   height: 100px;
   background-color: var(--black);
   position: relative;
+  display: flex;
+  align-items: center;
 }
 
 .topRight {
@@ -20,48 +22,34 @@
 .hr {
   margin: 0;
   width: 100%;
-  border: 7px solid var(--light-grey);
+  border: none;
+  border-bottom: 14px solid var(--light-grey);
 }
 
 .brandContent {
-  max-width: var(--base-width);
-  margin: auto;
-  height: 60px;
+  width: var(--base-width);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 15px;
 }
 
-.logoArea {
-  width: 80px;
+.logo {
   height: 80px;
-  margin-left: 0;
-  background-image: url('/src/components/navbar/logo.svg');
-  top: 10px;
-  position: relative;
-  float: left;
-
+  width: auto;
+  display: block;
 }
 
 .nameArea {
-  width: auto;
-  height: 80px;
-  position: relative;
-  float: left;
   color: var(--white);
-  top: 40px;
-  margin-left: 20px;
   font-size: 14px;
   letter-spacing: 2px;
   font-weight: bold;
-
 }
 
 .sloganArea {
-  width: auto;
-  height: 80px;
-  position: relative;
-  float: left;
   color: var(--white);
-  top: 41px;
-  margin-left: 11px;
   font-size: 12px;
   letter-spacing: 2px;
   font-weight: normal;

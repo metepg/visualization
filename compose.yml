@@ -11,5 +11,39 @@ services:
     volumes:
       - visualization_db_data:/var/lib/postgresql/data
 
+  backend:
+    image: maven:3.9.6-eclipse-temurin-21-alpine
+    container_name: visualization-backend
+    working_dir: /app
+    volumes:
+      - ./server:/app
+      - ~/.m2:/root/.m2
+    ports:
+      - "8080:8080"
+    environment:
+      - SPRING_PROFILES_ACTIVE=container
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://visualization-database:5432/visualization
+      - SPRING_DATASOURCE_USERNAME=postgres
+      - SPRING_DATASOURCE_PASSWORD=postgres
+      - SPRING_SQL_INIT_MODE=always
+    command: mvn spring-boot:run
+    depends_on:
+      - visualization-database
+
+  frontend:
+    image: node:lts-alpine
+    container_name: visualization-frontend
+    working_dir: /client
+    ports:
+      - "5173:5173"
+    volumes:
+      - ./client:/client
+      - /client/node_modules
+    environment:
+      - VITE_PROXY_TARGET=http://backend:8080
+    command: sh -c "npm ci && npm run dev -- --host"
+    depends_on:
+      - backend
+
 volumes:
   visualization_db_data:

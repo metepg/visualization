@@ -3,7 +3,7 @@ FROM node:lts-alpine AS client
 WORKDIR /client
 
 COPY client/package*.json ./
-RUN --mount=type=cache,target=/root/.npm npm ci --no-audit --no-fund
+RUN npm ci --no-audit --no-fund --verbose
 
 COPY client/ .
 RUN npm run build

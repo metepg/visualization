@@ -78,7 +78,7 @@ jobs:
           cache-to: type=gha,mode=max
 
       - name: Deploy to test environment
-        if: github.ref == 'refs/heads/dev'
+        if: github.event_name == 'workflow_dispatch'
         run: |
           curl --request GET \
             --url "${{ secrets.DEPLOY_WEBHOOK_DEV }}" \

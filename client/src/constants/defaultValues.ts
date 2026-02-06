@@ -46,13 +46,13 @@ export const DEFAULT_FILTERS: Filters = {
   goaltypefor: GOAL_TYPE[0],
   goaltypeagainst: GOAL_TYPE[5] // None
 }
-export const TABLE_HEADERS: { text: string, width: string }[] = [
+export const TABLE_HEADERS: { text: string, width: string, period?: string}[] = [
   { text: 'Date', width: '60px' },
   { text: 'Game', width: '105px' },
-  { text: '1st period', width: '213px' },
-  { text: '2nd period', width: '213px' },
-  { text: '3rd period', width: '213px' },
-  { text: 'OT', width: '58px' },
+  { text: '1st period', width: '213px', period: 'p1' },
+  { text: '2nd period', width: '213px', period: 'p2' },
+  { text: '3rd period', width: '213px', period: 'p3' },
+  { text: 'OT', width: '58px', period: 'ot' },
   { text: 'SO', width: '25px' },
   { text: 'Result', width: '62px' },
   { text: '+', width: '30px' }

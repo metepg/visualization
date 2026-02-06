@@ -8,6 +8,7 @@ import Row from "./Row.tsx";
 import { Game, Periods } from "../../../models/GameData.ts";
 import { Player } from "../../../models/Player.ts";
 import { Filters } from "../../../models/Filters.ts";
+import PeriodHighLight from "./PeriodHighLight.tsx";
 
 interface TableRowValues {
   date: string;
@@ -25,9 +26,10 @@ interface Props {
   filters: Filters,
   filteredGame: Game,
   playersById: Map<number, Player> | undefined
+  activePeriod: string;
 }
 
-const TableBodyContent: React.FC<Props> = ({ filteredGame, filters, playersById }) => {
+const TableBodyContent: React.FC<Props> = ({ filteredGame, filters, playersById, activePeriod }) => {
   const [selectedRows, setSelectedRows] = useState<string[]>([]);
   const [hoveredRow, setHoveredRow] = useState<string>();
 
@@ -83,44 +85,52 @@ const TableBodyContent: React.FC<Props> = ({ filteredGame, filters, playersById 
       date,
       teams,
       period1: (
-        <Timeline
-          goals={goalsByPeriod.period1}
-          filters={filters}
-          game={game}
-          selectedRowDate={isSelectedGame}
-          isHoveredRow={isHovered}
-          playersById={playersById}
-        />
+        <PeriodHighLight isActive={activePeriod === 'p1'}>
+          <Timeline
+            goals={goalsByPeriod.period1}
+            filters={filters}
+            game={game}
+            selectedRowDate={isSelectedGame}
+            isHoveredRow={isHovered}
+            playersById={playersById}
+          />
+        </PeriodHighLight>
       ),
       period2: (
-        <Timeline
-          goals={goalsByPeriod.period2}
-          filters={filters}
-          game={game}
-          selectedRowDate={isSelectedGame}
-          isHoveredRow={isHovered}
-          playersById={playersById}
-        />
+        <PeriodHighLight isActive={activePeriod === 'p2'}>
+          <Timeline
+            goals={goalsByPeriod.period2}
+            filters={filters}
+            game={game}
+            selectedRowDate={isSelectedGame}
+            isHoveredRow={isHovered}
+            playersById={playersById}
+          />
+        </PeriodHighLight>
       ),
       period3: (
-        <Timeline
-          goals={goalsByPeriod.period3}
-          filters={filters}
-          game={game}
-          selectedRowDate={isSelectedGame}
-          isHoveredRow={isHovered}
-          playersById={playersById}
-        />
+        <PeriodHighLight isActive={activePeriod === 'p3'}>
+          <Timeline
+            goals={goalsByPeriod.period3}
+            filters={filters}
+            game={game}
+            selectedRowDate={isSelectedGame}
+            isHoveredRow={isHovered}
+            playersById={playersById}
+          />
+        </PeriodHighLight>
       ),
       OT: (
-        <Timeline
-          goals={goalsByPeriod.overtime}
-          filters={filters}
-          game={game}
-          selectedRowDate={isSelectedGame}
-          isHoveredRow={isHovered}
-          playersById={playersById}
-        />
+        <PeriodHighLight isActive={activePeriod === 'ot'}>
+          <Timeline
+            goals={goalsByPeriod.overtime}
+            filters={filters}
+            game={game}
+            selectedRowDate={isSelectedGame}
+            isHoveredRow={isHovered}
+            playersById={playersById}
+          />
+        </PeriodHighLight>
       ),
       SO: <Shootout showAll={false} game={game} filters={filters}/>,
       result: <Result game={game} filters={filters}/>,

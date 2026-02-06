@@ -27,7 +27,7 @@ const NowVisualizing: React.FC<Props> = ({ filters, players }) => {
 
   return (
     <section className={styles.wrapper}>
-      <div className={styles.visualizeText}><p>NOW VISUALIZING </p></div>
+      <div className={styles.visualizeText}><p>NOW VISUALIZING</p></div>
       <div className={styles.selectedFilters}>
         <p>
           {selectedFilters.map((label, i) => (
